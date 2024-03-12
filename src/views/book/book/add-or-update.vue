@@ -53,6 +53,7 @@ import { ElMessage } from 'element-plus/es'
 import { useBookApi, useBookSubmitApi } from '@/api/book/book'
 import constant from '@/utils/constant'
 import cache from '@/utils/cache'
+import type { UploadProps } from 'element-plus'
 const emit = defineEmits(['refreshDataList'])
 
 const visible = ref(false)
@@ -92,7 +93,7 @@ const handleContentSuccess: UploadProps['onSuccess'] = (res, file) => {
 	}
         dataForm.bookContent=res.url
 	Object.assign(dataForm, res.data)
-	logo
+	// logo
 
 }
 
